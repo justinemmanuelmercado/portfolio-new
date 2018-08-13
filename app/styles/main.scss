@@ -1,86 +1,59 @@
 @import 'variables';
-@import 'fonts';
+@import '_fonts';
 @import 'container';
+@import 'footer';
 
-// body {
-//   height: 100%;
-//   display: flex;
-//   max-width: 100vw;
-//   min-height: 100vh;
-//   justify-content: space-between;
-//   flex-direction: column;
-//   background-color: $cream;
-// }
-
-// .container {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: space-between;
-//   width: 100%;
-//   height: 100%;
-
-//   aside {
-//     flex: 0 0 12em;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     min-width: 100px;
-//     height: 100%;
-//     background-color: $darkGrey;
-
-//     ul {
-//       flex: 1;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: space-between;
-//       align-items: center;
-//       padding: 0;
-
-//       li {
-//         list-style-type: none;
-//         margin: 0;
-//         padding: 0;
-//         text-decoration: none;
-//       }
-//     }
-//   }
-// }
-
-// footer {
-//   width: 100%;
-//   max-width: 80vw;
-//   margin: 0 auto;
-
-//   > div {
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: flex-start;
-//     height: 50px;
-//   }
-// }
-
-.HolyGrail,
-.HolyGrail-body {
-  display: flex;
-  flex-direction: column;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.HolyGrail-nav {
+.holygrail,
+.holygrail-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.holygrail-nav {
   order: -1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: $cream;
+  box-shadow: $boxShadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ul {
+    padding: 0 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
-  .HolyGrail-body {
+  .holygrail-body {
     flex-direction: row;
     flex: 1;
   }
-  .HolyGrail-content {
-    flex: 1;
+
+  .holygrail-content {
+    width: 75%;
   }
-  .HolyGrail-nav, .HolyGrail-ads {
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
+
+  .holygrail-nav {
+    width: 25%;
+    height: 100vh;
   }
 }
