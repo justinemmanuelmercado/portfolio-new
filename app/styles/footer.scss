@@ -12,31 +12,34 @@
   justify-content: space-between;
 }
 
-.tooltip {
-  opacity: 0;
-  top: -30px;
-  left: 30px;
-  position: absolute;
-  font-size: 16px;
-  transition: all 0.5s;
-  background-color: $cream;
-  border: 1px solid $accentBlue;
-  border-radius: 8px;
-  padding: 10px 20px;
-  z-index: 1;
-  box-shadow: $boxShadow;
-}
-
-.tooltip-hover {
+.tooltip-holder {
   position: relative;
-  color: $accentBlue;
-  font-weight: 600;
-  border-bottom: 1px solid $accentBlue;
-  cursor: pointer;
 
-  &:hover {
-    .tooltip {
-      opacity: 1;
+  .tooltip {
+    color: $blue;
+    opacity: 0;
+    top: -30px;
+    left: 30px;
+    position: absolute;
+    font-size: 16px;
+    transition: all 0.5s;
+    background-color: $cream;
+    border: 1px solid $accentBlue;
+    border-radius: 8px;
+    padding: 10px 20px;
+    z-index: 1;
+    box-shadow: $boxShadow;
+    font-weight: 600;
+  }
+
+  .tooltip-hover {
+    color: $accentBlue;
+    font-weight: 600;
+
+    &:hover {
+      ~ .tooltip {
+        opacity: 1;
+      }
     }
   }
 }

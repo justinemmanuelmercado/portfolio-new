@@ -1,2 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 
-// something
+  .container-holder {
+    max-width: 90%;
+    height: 100%;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 60px;
+    align-self: flex-end;
+    position: relative;
+
+    .next-button {
+      right: 10px;
+      bottom: 0;
+      animation: bounce 1s infinite;
+      position: absolute;
+      border: 0;
+      background-color: $blue;
+      color: $cream;
+      height: 60px;
+      width: 60px;
+      font-size: 20px;
+      box-shadow: $boxShadow;
+      font-weight: 600;
+      
+    }
+  }
+}
+
+@include keyframes(bounce) {
+  0% {
+    bottom: 0px;
+  }
+
+  50% {
+    bottom: -10px;
+  }
+
+  100% {
+    bottom: 0px;
+  }
+}

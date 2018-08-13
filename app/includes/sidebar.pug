@@ -2,11 +2,10 @@
 //- like so './images/image.jpg',
 //- and not '../images/image.jpg'
 
-ul
-  li
-    a(href="#about") ABOUT
-  li
-    a(href="#portfolio") PORTFOLIO
-  li
-    a(href="#contact") CONTACT
-    
+.nav-container
+  a(href="#about").nav-item.active 
+    span.text-holder ABOUT
+  a(href="#portfolio").nav-item 
+    span.text-holder PORTFOLIO
+  a(href="#contact").nav-item 
+    span.text-holder CONTACT

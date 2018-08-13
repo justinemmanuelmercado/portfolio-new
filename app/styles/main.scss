@@ -2,6 +2,8 @@
 @import '_fonts';
 @import 'container';
 @import 'footer';
+@import 'sidebar';
+@import 'burger';
 
 a {
   text-decoration: none;
@@ -13,6 +15,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: $cream;
+  color: $darkGrey;
 }
 
 .holygrail-nav {
@@ -20,40 +24,57 @@ a {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: $cream;
+  background-color: $darkGrey;
+  color: $grey;
   box-shadow: $boxShadow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  ul {
-    padding: 0 10px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    li {
-      a {
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 @media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
   .holygrail-body {
     flex-direction: row;
     flex: 1;
   }
 
   .holygrail-content {
-    width: 75%;
+    width: 70%;
   }
 
   .holygrail-nav {
-    width: 25%;
+    width: 30%;
     height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: flex;
+  }
+
+  .holygrail-body {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .holygrail-content {
+    width: 100%;
+  }
+
+  .holygrail-nav {
+    position: fixed;
+    width: 70%;
+    margin-left: -70%;
+    transition: margin-left 0.5s;
+    height: 100vh;
+
+    &.open {
+      margin-left: 0;
+    }
   }
 }

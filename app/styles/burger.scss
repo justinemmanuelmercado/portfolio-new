@@ -1,0 +1,28 @@
+.burger {
+  position: sticky;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  background-color: $darkerGrey;
+  content: '';
+  width: 60px;
+  height: 36px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: $boxShadow;
+  cursor: pointer;
+
+  .bar {
+    position: static;
+    z-index: 2;
+    content: '';
+    background-color: $cream;
+    width: 20px;
+    height: 5px;
+    border-radius: 10px;
+  }
+}
