@@ -2,51 +2,88 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-height: 100vh;
+  position: relative;
 
   .container-holder {
     max-width: 90%;
     height: 100%;
   }
-  .button-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-    width: 100%;
+  .next-button {
+    right: 10px;
+    top: 30px;
+    animation: bounce 1s infinite;
+    position: absolute;
+    border: 0;
+    background-color: $blue;
+    color: $cream;
     height: 60px;
-    align-self: flex-end;
-    position: relative;
-
-    .next-button {
-      right: 10px;
-      bottom: 0;
-      animation: bounce 1s infinite;
-      position: absolute;
-      border: 0;
-      background-color: $blue;
-      color: $cream;
-      height: 60px;
-      width: 60px;
-      font-size: 20px;
-      box-shadow: $boxShadow;
-      font-weight: 600;
-      
-    }
+    width: 60px;
+    font-size: 20px;
+    box-shadow: $boxShadow;
+    font-weight: 600;
+    
   }
+  
 }
 
 @include keyframes(bounce) {
   0% {
-    bottom: 0px;
+    margin-top: 0px;
   }
 
   50% {
-    bottom: -10px;
+    margin-top: -10px;
   }
 
   100% {
-    bottom: 0px;
+    margin-top: 0px;
   }
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+      font-weight: 600;
+      margin: 5px 0;
+      background-color: $blue;
+      box-shadow: $boxShadow;
+      .skill-icon {
+        align-self: center;
+        height: 100%;
+        color: $accentBlue;
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .skills-items {
+        color: $cream;
+        align-self: center;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10px;
+      }
+    }
+  }
+
 }

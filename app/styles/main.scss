@@ -53,8 +53,16 @@ a {
 }
 
 @media (max-width: 767px) {
+  .next-button {
+    display: none;
+  }
+  
   .burger {
     display: flex;
+  }
+
+  body.open {
+    overflow: hidden;
   }
 
   .holygrail-body {
@@ -68,8 +76,8 @@ a {
 
   .holygrail-nav {
     position: fixed;
-    width: 70%;
-    margin-left: -70%;
+    width: 100%;
+    margin-left: -101%;
     transition: margin-left 0.5s;
     height: 100vh;
 
