@@ -5,6 +5,7 @@ $darkerGrey: #514a48;
 $blue: #1c6e8c;
 $accentBlue: #274156;
 $boxShadow: 0 4px 6px 0 rgba(0, 0, 0, 0.8);
+$boxShadow2: rgba(0,0,0,.15) 0 1.6rem 4.75rem;
 $boxShadowInset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
 @mixin keyframes($name) {
