@@ -4,10 +4,15 @@
 @import 'footer';
 @import 'sidebar';
 @import 'burger';
+@import 'portfolio';
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  background-color: $cream;
 }
 
 .holygrail,
@@ -15,7 +20,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $cream;
   color: $darkGrey;
 }
 
@@ -56,7 +60,7 @@ a {
   .next-button {
     display: none;
   }
-  
+
   .burger {
     display: flex;
   }
@@ -67,6 +71,7 @@ a {
 
   .holygrail-body {
     flex-direction: row;
+    justify-content: space-around;
     flex: 1;
   }
 

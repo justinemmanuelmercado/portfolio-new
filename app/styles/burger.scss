@@ -1,28 +1,49 @@
 .burger {
   position: sticky;
-  z-index: 1;
   top: 10px;
   left: 10px;
-  background-color: $darkerGrey;
-  content: '';
-  width: 60px;
-  height: 36px;
-  border-radius: 40px;
+  width: 70px;
+  height: 70px;
+  background: $darkerGrey;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 10px 0;
+  justify-content: center;
   box-shadow: $boxShadow;
-  cursor: pointer;
+  transition: left 0.5s, top 0.5s;
+  z-index: 2;
+  border-radius: 2px;
 
   .bar {
-    position: static;
-    z-index: 2;
-    content: '';
-    background-color: $cream;
-    width: 20px;
-    height: 5px;
-    border-radius: 10px;
+    height: 8px;
+    width: 40px;
+    background-color: $grey;
+    border-radius: 2px;
+    transition: all 0.5s;
+    margin: 2px 0;
+  }
+
+  &.open {
+    box-shadow: 0 0 0 0 black;
+    left: calc(100vw - 10px);
+    top: 5px;
+
+    .bar {
+      height: 12px;
+      margin: 0;
+      width: 40px;
+
+      &:nth-child(1) {
+        transform: translateY(15px) translateX(2px) rotate(225deg);
+      }
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-9px) translateX(2px) rotate(-225deg);
+      }
+    }
   }
 }

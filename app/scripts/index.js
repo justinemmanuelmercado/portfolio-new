@@ -12,6 +12,8 @@ if (process.env.NODE_ENV !== 'production') {
   const toggleOpen = () => {
     sideNav.classList.toggle('open')
     body.classList.toggle('open')
+    // burger.classList.toggle('closed')
+    burger.classList.toggle('open')
   }
   const assignActive = () => {
     const currentActive = document.querySelector('.active')
@@ -35,7 +37,6 @@ if (process.env.NODE_ENV !== 'production') {
   })
 
   window.addEventListener('hashchange', function () {
-    console.log(location.hash)
     assignActive()
     toggleOpen()
   })

@@ -1,11 +1,16 @@
+/* stylelint-disable */
+
 $grey: #d0ccd0;
 $cream: #fbfcff;
 $darkGrey: #605856;
 $darkerGrey: #514a48;
 $blue: #1c6e8c;
 $accentBlue: #274156;
+$numo1: #23A9E1;
+$numo2: #266586;
+
 $boxShadow: 0 4px 6px 0 rgba(0, 0, 0, 0.8);
-$boxShadow2: rgba(0,0,0,.15) 0 1.6rem 4.75rem;
+$boxShadow2: rgba(0, 0, 0, 0.2) 0 1.9rem 4.85rem;
 $boxShadowInset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
 @mixin keyframes($name) {
