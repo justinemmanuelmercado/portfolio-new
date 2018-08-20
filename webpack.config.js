@@ -75,7 +75,8 @@ const commonConfig = merge([
     },
     plugins: [
       new HtmlPlugin({
-        template: './index.pug'
+        template: './index.pug',
+        favicon: './images/favicon.png'
       }),
       new FriendlyErrorsPlugin(),
       new StylelintPlugin(lintStylesOptions)

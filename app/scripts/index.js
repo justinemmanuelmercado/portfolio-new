@@ -1,6 +1,6 @@
 import '../styles/main.scss'
 import '@fortawesome/fontawesome-free/js/all.js'
-require('../images/favicon.png')
+import '../images/favicon.png'
 
 if (process.env.NODE_ENV !== 'production') {
   require('../index.pug')
