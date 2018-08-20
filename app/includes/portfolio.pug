@@ -13,36 +13,55 @@
                 span MySQL
                 span Bootstrap
               span.actions
-                a(href="https://numo.finance")
+                a(href="http://numo.finance" target="_blank")
                   button.visit VISIT NUMO
-                a(href="#numo")
-                  button.read READ ABOUT
-          .project-description
-            p A project I worked on that started from PSD files and ideas. Numo connects small businesses with established lenders and suggests plans based on an initial survey of the business's requirements.
-            p This was the first fullstack project I worked on and it challenged me because I had no prior professional experience with APIs, storing data in the backend or deploying a website to production. 
-            p During development I wore different hats including main back end developer, front end development lead, database administrator and server architect.
-            p After 6 months and the first version was live on production I learned much of the basics of web development, from how that front end interacts with the back end to how to perform CRON jobs that emails customers regularly.
-            p During the 2 months after the initial product launch, I continued working on the project, creating the admin side for Numo until I was transferred to different projects all involving working from flat design files to working web apps.
-        .project#numo
+                a(class="read-more" name="numo")
+                  button.read READ MORE
+            .project-image.numo
+            .project-description.numo
+              div
+                span.read-more(name="numo")
+                  .bar
+                  .bar
+                span
+                  h1 Numo Finance
+                span Numo Finance was a project I worked on that started from PSD files and ideas. 
+                  |  Numo connects small businesses with established lenders and suggests 
+                  |  plans based on an initial survey of the business's requirements.
+                span Creating Numo taught me the basics of creating websites, 
+                  |  from how the client interacts with the backend, how sessions worked, 
+                  |  basics of security, storing data into the database, setting up the environment for deployment, etc.
+                span I've worked on numo as the sole backend developer and part of the front end development team for 6 months,
+                  |  until I was transferred to a different project.
+        .project#gsp
           .project-banner
             .left
-              span.title Numo Finance
+              span.title Global Study Partners
               span.technology-used
-                span jQuery
-                span PHP
+                span AngularJS
+                span Node
                 span MySQL
                 span Bootstrap
               span.actions
-                a(href="https://numo.finance")
-                  button.visit VISIT NUMO
-                a(href="#numo")
-                  button.read READ ABOUT
-          .project-description
-            p A project I worked on that started from PSD files and ideas. Numo connects small businesses with established lenders and suggests plans based on an initial survey of the business's requirements.
-            p This was the first fullstack project I worked on and it challenged me because I had no prior professional experience with APIs, storing data in the backend or deploying a website to production. 
-            p During development I wore different hats including main back end developer, front end development lead, database administrator and server architect.
-            p After 6 months and the first version was live on production I learned much of the basics of web development, from how that front end interacts with the back end to how to perform CRON jobs that emails customers regularly.
-            p During the 2 months after the initial product launch, I continued working on the project, creating the admin side for Numo until I was transferred to different projects all involving working from flat design files to working web apps.
+                a(href="https://globalstudypartners.com" target="_blank")
+                  button.visit VISIT GSP
+                a(class="read-more" name="gsp")
+                  button.read READ MORE
+            .project-image
+            .project-description.gsp
+              div
+                span.read-more(name="gsp")
+                  .bar
+                  .bar
+                span
+                  h1 Global Study Partners and 
+                    a(href="https://studylane.com" target="_blank").link Studylane
+                span Global Study Partners and its partner site Studylane allows students and agents to 
+                  |  send inquiries and manage course applications to schools from Australia, the United States and other countries
+                  |  through the portal.
+                span Working on the project with more senior teammates and a more mature development process 
+                  |  trained me to properly structure my code make it to be more maintanable.
+                span I worked on GSP/Studylane for 1 year before being moved to another project                
     a(href="#contact")
       button.next-button
         i.fas.fa-arrow-down

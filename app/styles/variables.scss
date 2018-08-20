@@ -6,12 +6,18 @@ $darkGrey: #605856;
 $darkerGrey: #514a48;
 $blue: #1c6e8c;
 $accentBlue: #274156;
+
 $numo1: #23A9E1;
 $numo2: #266586;
+
+$gsp1: #6F3371;
+$gsp2: #17A1AB;
 
 $boxShadow: 0 4px 6px 0 rgba(0, 0, 0, 0.8);
 $boxShadow2: rgba(0, 0, 0, 0.2) 0 1.9rem 4.85rem;
 $boxShadowInset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+$skillsList: 'angular', 'bootstrap', 'css', 'express', 'html', 'jquery', 'js', 'mysql', 'nginx', 'node', 'php', 'pug', 'react', 'sass', 'linux', 'circle', 'aws',;
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
@@ -28,5 +34,27 @@ $boxShadowInset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
   @keyframes #{$name} {
     @content;
+  }
+}
+
+@mixin randomPosition($top, $left, $size) {
+  top: $top + px;
+  left: $left + vw;
+  transform: scale($size);
+}
+
+/* stylelint-disable at-rule-no-unknown */
+@include keyframes(bounce) {
+  /* stylelint-enable */
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -10px;
+  }
+
+  100% {
+    margin-top: 0;
   }
 }

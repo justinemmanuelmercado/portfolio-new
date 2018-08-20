@@ -5,6 +5,7 @@
 @import 'sidebar';
 @import 'burger';
 @import 'portfolio';
+@import 'contact';
 
 a {
   text-decoration: none;
@@ -56,7 +57,31 @@ body {
   }
 }
 
+.link {
+  text-decoration: underline;
+}
+
 @media (max-width: 767px) {
+  .portfolio {
+    width: 90vw;
+
+    .project-banner {
+      flex-direction: column-reverse;
+
+      .left {
+        padding: 10px;
+
+        .actions {
+          align-self: center;
+        }
+      }
+
+      .project-image {
+        width: 100%;
+      }
+    }
+  }
+
   .next-button {
     display: none;
   }
