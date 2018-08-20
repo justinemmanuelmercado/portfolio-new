@@ -1,5 +1,4 @@
 import '../styles/main.scss'
-import '@fortawesome/fontawesome-free/js/all.js'
 import '../images/favicon.png'
 
 if (process.env.NODE_ENV !== 'production') {

@@ -79,8 +79,5 @@
   ],
   "engines": {
     "node": ">=6.0.0"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.2.0"
   }
 }
